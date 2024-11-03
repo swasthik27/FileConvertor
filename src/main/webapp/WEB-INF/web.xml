@@ -1,0 +1,25 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+         version="3.1">
+    <display-name>File Converter</display-name>
+
+    <servlet>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.convertor.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FileConvertorServlet</servlet-name>
+        <servlet-class>com.convertor.FileConvertorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileConvertorServlet</servlet-name>
+        <url-pattern>/convert</url-pattern> <!-- Changed to /convert for simplicity -->
+    </servlet-mapping>
+</web-app>
